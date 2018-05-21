@@ -86,7 +86,7 @@ li {
     margin: 8px;
     display: block;
     list-style: none;
-    margin: 10px 0px;
+    margin: 64px 0px;
     text-align: center;
     height: auto;
     width: auto;
@@ -96,6 +96,7 @@ li:hover {
     transition: none;
 }
 a {
+    font-size: 2em;
     text-align: justify;
     border: 2px solid white;
     border-radius: 5px;
