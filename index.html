@@ -6,16 +6,18 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+        <title>{% if page.title %}{{ page.title }}
+                {% else %}{{ site.title }}{% endif %}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="{{ site.description }}">
-        <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+        <link rel="canonical" href="{{ page.url | replace:'index.html',''
+                | prepend: site.baseurl | prepend: site.url }}">
         {% if site.favicon_img %}
         <link rel="shortcut icon" href="{{ site.favicon_img_path }}" />
         {% endif %}
         <link rel="stylesheet" href="{{ "style.css" | prepend: site.baseurl }}">
-        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin'
+                rel='stylesheet' type='text/css'>
     </head>
     <body>
         <div class="content">
@@ -33,7 +35,14 @@
             <ul>
                 {% for link in site.links %}
                 <li>
-                    <a href="{{ link.url }}" target="_blank" class="{{ link.icon }}">
+                    <a href="{{ link.url }}" target="_blank"{% if link.icon %}
+                             class="{{ link.icon }}"{% endif %}>
+                        {% if link.svg %}
+                        <svg viewBox="{% if link.viewbox %}{{ link.viewbox }}
+                                      {% else %}0 0 128 128{% endif %}">
+                            {{ link.svg }}
+                        </svg>
+                        {% endif %}
                         <span class="description">{{ link.desc }}</span>
                     </a>
                 </li>

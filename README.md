@@ -1,6 +1,7 @@
 # EzAF
 
-Stupid simple project frameworks.
+Stupid simple frameworks.
 
-Using jekyll theme *[Front Cover](https://github.com/dashingcode/front-cover)*
-by [dashingcode](https://github.com/dashingcode).
+Powered by [Jekyll](https://jekyllrb.com) and based on the
+*[Front Cover](https://github.com/dashingcode/front-cover)* theme by
+[dashingcode](https://github.com/dashingcode).
