@@ -4,6 +4,7 @@ variables:
   JEKYLL_ENV: production
 
 before_script:
+  - mv /builds/ezaf/ezaf.gitlab.io/.Gemfile /builds/ezaf/ezaf.gitlab.io/Gemfile
   - bundle install
 
 test:
